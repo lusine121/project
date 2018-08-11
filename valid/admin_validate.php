@@ -13,7 +13,7 @@ function imageRequired()
 
 
 function required($input){
-   // if(htmlspecialchars(stripslashes(trim(strlen($input)) > 0))) return true;
+   
     if(trim(strlen($input)) > 0){
          return true;
     }else{
