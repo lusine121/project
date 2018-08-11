@@ -21,8 +21,8 @@ if(isset($_POST["login"])){
 
     if(!empty($_POST["email"]) && !empty($_POST["password"])) {
         $email=($_POST["email"]);
-        $password=md5($_POST["password"]);
-        $query = $conn->query("SELECT * FROM users WHERE email ='email' AND password = '$password'");
+        $password = md5($_POST["password"]);
+        $query = $conn->query("SELECT * FROM users WHERE email ='$email' AND password = '$password'");
         $count = $query->rowcount();
         $row = $query->fetch();
         if($count!=0)
